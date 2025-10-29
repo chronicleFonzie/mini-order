@@ -14,6 +14,8 @@ or to access via local netowrk
 ng serve --host 0.0.0.0 --port 4200
 ```
 
+## TO AVOID CORS ISSUE RUN Locally..not over the network.
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
