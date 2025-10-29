@@ -56,3 +56,5 @@ src/environments/*.local.ts
 
 # Optional: if you keep per-dev proxy overrides, ignore the local variant (keep proxy.conf.json tracked)
 proxy.conf.local.json
+
+package-lock.json
