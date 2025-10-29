@@ -1,43 +1,58 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# --- Angular / Node ---
+node_modules/
+dist/
+dist-ssr/
+.angular/
+.angular/cache/
+out-tsc/
+tmp/
+temp/
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# TS incremental build info
+*.tsbuildinfo
 
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# --- Testing artifacts ---
+coverage/
+.nyc_output/
+.vitest/
+.karma/
+*.lcov
+reports/
+test-results/
 
-# Visual Studio Code
+# --- Linters / caches ---
+.eslintcache
+.stylelintcache
+.sass-cache/
+
+# --- IDE / Editor junk ---
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+.idea/
+*.iml
+.vs/
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-__screenshots__/
-
-# System files
+# --- OS junk ---
 .DS_Store
 Thumbs.db
+
+# --- Env / local-only config (keep real secrets out of git) ---
+.env
+.env.*.local
+
+# Optional: ignore per-dev Angular env files (commit the default ones, ignore *local*)
+src/environments/*.local.ts
+
+# Optional: if you keep per-dev proxy overrides, ignore the local variant (keep proxy.conf.json tracked)
+proxy.conf.local.json
