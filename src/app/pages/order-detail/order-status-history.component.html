@@ -1,0 +1,14 @@
+<a routerLink="/">← Back</a>
+
+<ng-container *ngIf="history && history.length; else none">
+  <h3>Order {{id}} — Status History</h3>
+  <ul>
+    <li *ngFor="let h of history">
+      {{ h.date | date:'short' }} — <b>{{ h.status }}</b> — {{ h.comment }}
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #none>
+  <p>No history found for order <b>{{id}}</b>.</p>
+</ng-template>

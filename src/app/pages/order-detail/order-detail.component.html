@@ -1,0 +1,20 @@
+<a routerLink="/">← Back</a>
+
+<ng-container *ngIf="order; else notFound">
+  <h3>Order #{{order.id}}</h3>
+  <p><b>Customer:</b> {{order.customerName}}</p>
+  <p><b>Product:</b> {{order.product}}</p>
+  <p><b>Total:</b> ${{order.total}}</p>
+  <p><b>Current Status:</b> {{order.status}}</p>
+
+  <h4>Status History</h4>
+  <ul>
+    <li *ngFor="let h of history">
+      {{ h.date | date:'short' }} — <b>{{ h.status }}</b> — {{ h.comment }}
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #notFound>
+  <p>Order not found. Try ID <b>1</b> or <b>2</b>.</p>
+</ng-template>
