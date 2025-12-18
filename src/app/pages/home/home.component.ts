@@ -12,6 +12,7 @@ export class HomeComponent {
   id?: number;
   constructor(private router: Router) { }
   go() {
+    console.log("Just click go to order...")
     if (!Number(this.id)) {
       alert("Enter a number value higher then 1000.");
       return;
@@ -23,6 +24,7 @@ export class HomeComponent {
   }
 
   goToHistory() {
+    console.log("Just cliked the go to history.")
     if (!Number(this.id)) {
       alert("Enter a number value higher then 1000.");
       return;
